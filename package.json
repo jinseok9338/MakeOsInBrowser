@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jinseok9338/MakeOsInBrowser/issues"
   },
-  "homepage": "https://github.com/jinseok9338/MakeOsInBrowser#readme"
+  "homepage": "https://github.com/jinseok9338/MakeOsInBrowser#readme",
+  "dependencies": {
+    "sass": "^1.35.2"
+  }
 }
