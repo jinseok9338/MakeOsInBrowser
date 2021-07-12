@@ -1,0 +1,10 @@
+import 'styles/globals.scss' //File import 
+
+// import App from "next/app";
+import type { AppProps /*, AppContext */ } from 'next/app'
+
+export default function MyApp({ Component, pageProps }:AppProps) {
+  return <Component {...pageProps} />
+}
+
+
