@@ -1,10 +1,10 @@
+// eslint-disable-next-line import/no-unresolved
 import 'styles/globals.scss'; // File import
 
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app'
+import type { AppProps /* , AppContext */ } from 'next/app';
+import type { ReactElement } from 'react';
 
-export default function MyApp({ Component, pageProps }:AppProps) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }: AppProps): ReactElement {
+  return <Component {...pageProps} />;
 }
-
-
