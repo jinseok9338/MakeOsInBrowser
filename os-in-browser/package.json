@@ -44,8 +44,8 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "husky": {
-       "hooks": {
-      "pre-commit": "lint-staged"
+    "hooks": {
+      "pre-commit": "lint-staged";;
     }
   },
   "lint-staged": {
