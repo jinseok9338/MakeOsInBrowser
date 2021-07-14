@@ -19,11 +19,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "import"],
+  "plugins": ["react", "@typescript-eslint", "import","simple-import-sort"],
   "globals": {
     "React": "readonly"
   },
   "rules": {
+    "max-lines":["error",80],
     "import/no-unresolved": "error",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": [
@@ -31,7 +32,9 @@
       {
         "extensions": [".tsx"]
       }
-    ]
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error"
 
   },
   "settings": {
