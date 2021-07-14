@@ -43,10 +43,10 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0"
   },
-  "husky":{
-"hooks":{
-  "pre-commit":"lint-staged"
-}
+  "husky": {
+       "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*": "prettier --write",
