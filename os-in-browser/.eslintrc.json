@@ -2,6 +2,7 @@
   "env": {
     "browser": true,
     "es2021": true,
+    "jest": true,
     "node": true
   },
   "extends": [
@@ -34,7 +35,17 @@
       }
     ],
     "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error"
+    "simple-import-sort/imports": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "settings": {
     "import/parsers": {
