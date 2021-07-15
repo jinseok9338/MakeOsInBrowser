@@ -44,12 +44,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":       "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*": "prettier --write",
     "*.{js,ts,tsx}": "eslint --fix",
-    "*.scss": "stylelint --fix"
+    "*.scss":      "stylelint --fix"
   }
 }
