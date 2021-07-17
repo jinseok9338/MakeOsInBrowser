@@ -11,8 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "stylelint": "stylelint **/*.scss",
-    "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
