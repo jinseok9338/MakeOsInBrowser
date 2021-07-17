@@ -1,22 +1,62 @@
 {
-  "name": "makeosinbrowser",
+  "name": "os-in-browser",
   "version": "1.0.0",
-  "description": "This is a project to simulate Window OS in the browser",
-  "main": "index.js",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "eslint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "stylelint": "stylelint **/*.scss",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jinseok9338/MakeOsInBrowser.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jinseok9338/MakeOsInBrowser/issues"
-  },
-  "homepage": "https://github.com/jinseok9338/MakeOsInBrowser#readme",
   "dependencies": {
-    "sass": "^1.35.2"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.14",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "exlint": "^0.1.6",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.35.2",
+    "stylelint-config-prettier": "^8.0.2",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "jest": "^27.0.6",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write",
+    "*.{js,ts,tsx}": "eslint --fix",
+    "*.scss": "stylelint --fix"
   }
 }
