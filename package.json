@@ -11,7 +11,7 @@
     "eslint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "stylelint": "stylelint **/*.scss",
+    "stylelint": "stylelint **/*.tsx",
     "prettier": "prettier --write ."
   },
   "dependencies": {
