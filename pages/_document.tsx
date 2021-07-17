@@ -6,7 +6,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document';
-import { name } from 'package.json';
+// import Head from "next/head";
 import { ReactElement } from 'react';
 
 class MyDocument extends Document {
@@ -20,9 +20,8 @@ class MyDocument extends Document {
   render(): ReactElement {
     return (
       <Html lang="en">
-        <Head>
-          <title>{name}</title>
-        </Head>
+        <Head />
+
         <body>
           <Main />
           <NextScript />
