@@ -7,11 +7,16 @@
   },
   "extends": [
     "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:import/typescript",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -26,13 +31,19 @@
     "@typescript-eslint",
     "import",
     "simple-import-sort",
-    "jest"
+    "jest",
+    "jest-dom",
+    "testing-library"
   ],
   "globals": {
     "React": "readonly"
   },
   "rules": {
     "max-lines": ["error", 80],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports" }
+    ],
     "import/no-unresolved": "error",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": [
@@ -53,8 +64,10 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "testing-library/prefer-screen-queries": "off"
   },
+
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]

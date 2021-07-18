@@ -1,6 +1,7 @@
 /**
  * @jest-environment jsdom
  */
+
 import { render } from '@testing-library/react';
 import Index from 'pages/index';
 import { ThemeProvider } from 'styled-components';
