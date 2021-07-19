@@ -4,3 +4,9 @@
 // used for __tests__/testing-library.js
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
+
+import preloadAll from 'jest-next-dynamic';
+
+beforeAll(async () => {
+  await preloadAll();
+});
