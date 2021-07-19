@@ -65,7 +65,8 @@
         "tsx": "never"
       }
     ],
-    "testing-library/prefer-screen-queries": "off"
+    "testing-library/prefer-screen-queries": "off",
+    "react/prop-types": "off"
   },
 
   "settings": {
