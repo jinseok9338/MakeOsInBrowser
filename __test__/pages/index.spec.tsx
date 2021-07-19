@@ -12,7 +12,6 @@ test('renders index page', () => {
       <Index />
     </StyledApp>
   );
-  const helloWorldElement = getByText('Hello, world!');
 
-  expect(helloWorldElement).toBeInTheDocument();
+  expect(getByText('Hello, world!')).toBeInTheDocument();
 });
