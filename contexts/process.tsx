@@ -1,15 +1,22 @@
 import type { FC } from 'react';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
+import type { Process } from 'types/utils/processDirectory';
 import processDirectory from 'utils/processDirectory';
 
-const ProcessContext = createContext({});
+type ProcessContextState = {
+  processes: Partial<Process>;
+};
 
-const ProcessLoader: FC = () => (
-  <>
-    {Object.entries(processDirectory).map(([id, { Component }]) => (
-      <Component key={id} />
-    ))}
-  </>
-);
+const ProcessContext = createContext<ProcessContextState>({ processes: {} });
 
-export default ProcessLoader;
+export const ProcessProvider: FC = ({ children }) => {
+  const [processes, setProcesses] = useState(processDirectory);
+
+  return (
+    <ProcessContext.Provider value={{ processes }}>
+      {children}
+    </ProcessContext.Provider>
+  );
+};
+
+export const ProcessConsumer = ProcessContext.Consumer;
