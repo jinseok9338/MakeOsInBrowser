@@ -1,17 +1,18 @@
+import { SessionConsumer } from 'contexts/session';
 import type { FC } from 'react';
 import { ThemeProvider } from 'styled-components';
+import themes from 'styles/themes.json';
 
 import GlobalStyle from '../../styles/GlobalStyles';
-import themes from '../../styles/themes.json';
-import type { StyledAppProps } from '../../types/components/pages/styledApp';
 
-const StyledApp: FC<StyledAppProps> = ({
-  children,
-  theme = themes.default
-}) => (
+const StyledApp: FC = ({ children }) => (
   <>
     <GlobalStyle />
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <SessionConsumer>
+      {({ theme = themes.default }) => (
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      )}
+    </SessionConsumer>
   </>
 );
 
