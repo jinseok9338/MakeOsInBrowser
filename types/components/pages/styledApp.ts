@@ -1,7 +1,3 @@
-export type Theme = {
-  colors: {
-    primary: string;
-  };
-};
+import type { DefaultTheme } from 'styled-components';
 
-export type StyledAppProps = { theme?: Theme };
+export type StyledAppProps = { theme?: DefaultTheme };
