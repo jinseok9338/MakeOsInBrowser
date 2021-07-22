@@ -15,6 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+        <link rel="shortcut icon" href="/static/Apple_logo_black.svg.png" />
         <body>
           <Main />
           <NextScript />
