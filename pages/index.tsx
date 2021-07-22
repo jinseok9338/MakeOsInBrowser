@@ -1,4 +1,4 @@
-import WindowManager from 'components/system/WindowManager';
+import WindowManager from 'components/system/ProcessLoader';
 import { ProcessProvider } from 'contexts/process';
 import type { ReactElement } from 'react';
 

@@ -2,6 +2,7 @@ import type { ComponentType } from 'react';
 
 export type Process = {
   Component: ComponentType;
+  hasWindow: boolean;
 };
 
 export type Processes = {
@@ -9,5 +10,5 @@ export type Processes = {
 };
 
 export type ProcessContextState = {
-  processes: Partial<Processes>;
+  processes: Processes;
 };
