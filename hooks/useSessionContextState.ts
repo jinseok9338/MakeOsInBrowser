@@ -3,7 +3,7 @@ import type { SessionContextState } from 'types/contexts/session';
 const userSetTheme = undefined;
 
 const useSessionContextState = (): SessionContextState => ({
-  theme: userSetTheme // TODO: Load user Theme from localStorage
+  theme: userSetTheme
 });
 
 export default useSessionContextState;

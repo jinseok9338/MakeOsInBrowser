@@ -8,5 +8,7 @@ jobs:
 
       - name: Install modules
         run: npm install
+      - name: Run Build
+        run: npm run build
       - name: Run tests
         run: npm test

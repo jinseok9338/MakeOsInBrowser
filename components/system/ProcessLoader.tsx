@@ -2,7 +2,7 @@ import Window from 'components/system/Window';
 import { ProcessConsumer } from 'contexts/process';
 import type { FC } from 'react';
 
-// DO I need key ={id} ?
+// DO I need key ={id} ? Add Linting rule to catch key required
 
 const ProcessLoader: FC = () => (
   <ProcessConsumer>
