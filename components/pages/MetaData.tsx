@@ -4,11 +4,7 @@ import {
   name as PackageName
 } from 'package.json';
 import type { FC } from 'react';
-
-type MetaDataProps = {
-  name?: string;
-  description?: string;
-};
+import type { MetaDataProps } from 'types/components/pages/Metadata';
 
 const MetaData: FC<MetaDataProps> = ({
   name = PackageName,
