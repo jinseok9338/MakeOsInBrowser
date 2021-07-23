@@ -1,9 +1,9 @@
-import Window from 'components/system/Window';
 import { ProcessConsumer } from 'contexts/process';
+import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import type { Process, Processes } from 'types/contexts/process';
 
-// DO I need key ={id} ? Add Linting rule to catch key required
+const Window = dynamic(() => import('components/system/Window'));
 
 const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
   hasWindow ? (
@@ -16,8 +16,8 @@ const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
 
 const RenderProcesses: FC<{ processes: Processes }> = ({ processes }) => (
   <>
-    {Object.entries(processes).map(([id, { Component, hasWindow }]) => (
-      <RenderProcess key={id} Component={Component} hasWindow={hasWindow} />
+    {Object.entries(processes).map(([id, process]) => (
+      <RenderProcess key={id} {...process} />
     ))}
   </>
 );
