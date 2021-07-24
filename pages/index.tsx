@@ -5,7 +5,7 @@ import { getStartupProcesses } from 'utils/processDirectory';
 
 export default function Home(): ReactElement {
   return (
-    <ProcessProvider StartupProcesses={getStartupProcesses()}>
+    <ProcessProvider startupProcesses={getStartupProcesses()}>
       <WindowManager />
     </ProcessProvider>
   );
