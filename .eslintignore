@@ -8,4 +8,3 @@ public/
 yarn.lock
 static/
 /libs
-.eslintignore
