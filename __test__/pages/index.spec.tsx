@@ -5,10 +5,11 @@
 import { render } from '@testing-library/react';
 import StyledApp from 'components/pages/styledApp';
 import Index from 'pages/index';
+import themes from 'styles/themes.json';
 
 test('renders index page', () => {
   const { getByText } = render(
-    <StyledApp>
+    <StyledApp currentTheme={themes.default}>
       <Index />
     </StyledApp>
   );
