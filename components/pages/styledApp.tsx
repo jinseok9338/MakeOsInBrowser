@@ -7,10 +7,10 @@ import GlobalStyle from '../../styles/GlobalStyles';
 
 const StyledApp: FC = ({ children }) => (
   <>
-    <GlobalStyle />
     <SessionConsumer>
       {({ themeName }) => (
         <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
+          <GlobalStyle />
           {children}
         </ThemeProvider>
       )}
