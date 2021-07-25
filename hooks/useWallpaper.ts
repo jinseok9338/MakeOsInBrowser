@@ -1,19 +1,13 @@
-import WAVES from 'libs/vanta.waves.min';
 import type { RefObject } from 'react';
-import { useEffect } from 'react';
-import * as THREE from 'three';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from 'styled-components';
 
-const useWallpaper = (refElement: RefObject<HTMLElement>): void => {
-  useEffect(() => {
-    const vantaEffect = WAVES({
-      el: refElement.current,
-      THREE
-    });
+const useWallpaper = (desktopRef: RefObject<HTMLElement>): void => {
+  const { wallpaper } = useContext(ThemeContext);
 
-    return () => {
-      vantaEffect.destroy();
-    };
-  }, [refElement]);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  useEffect(() => wallpaper?.(desktopRef), [desktopRef, wallpaper]);
 };
 
 export default useWallpaper;
