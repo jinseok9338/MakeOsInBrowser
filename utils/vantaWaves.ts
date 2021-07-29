@@ -13,14 +13,18 @@ const disableControls = {
   touchControls: false
 };
 
+const hasWebGLContext = typeof WebGLRenderingContext !== 'undefined';
+
 const vantaWaves: wallpaperEffect =
   (settings: VantaWavesSettings) => (desktopRef: RefObject<HTMLElement>) => {
-    const vantaEffect = WAVES({
-      el: desktopRef.current,
-      THREE,
-      ...disableControls,
-      ...settings
-    });
+    const vantaEffect = hasWebGLContext
+      ? WAVES({
+          el: desktopRef.current,
+          THREE,
+          ...disableControls,
+          ...settings
+        })
+      : undefined;
 
     return () => {
       vantaEffect?.destroy?.();
