@@ -10,6 +10,7 @@
     "airbnb/hooks",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
@@ -30,6 +31,7 @@
     "react",
     "@typescript-eslint",
     "import",
+    "prettier",
     "simple-import-sort",
     "jest",
     "jest-dom",
@@ -52,7 +54,7 @@
         "extensions": [".tsx"]
       }
     ],
-    "semi": ["error", "always"],
+
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
     "import/extensions": [
