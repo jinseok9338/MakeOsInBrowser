@@ -1,7 +1,7 @@
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
 import Document from 'next/document';
 
-import WithServerStyleSheet from '../utils/withServerStyleSheet';
+import WithServerStyleSheet from '../utils/withStyledComponents';
 
 class MyDocument extends Document {
   static async getInitialProps(
