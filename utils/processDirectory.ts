@@ -1,4 +1,4 @@
-import Taskbar from 'components/system/Taskbar';
+import Taskbar from 'components/system/Taskbar/Taskbar';
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/contexts/process';
 

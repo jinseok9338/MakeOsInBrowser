@@ -1,4 +1,3 @@
-import type { RefObject } from 'react';
 import * as THREE from 'three';
 import type {
   VantaWavesSettings,

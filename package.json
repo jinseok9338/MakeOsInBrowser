@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "eslint": "eslint .",
+    "eslint": "eslint . --fix ",
     "test": "jest",
     "test:watch": "jest --watch",
     "stylelint": "stylelint **/*.tsx",

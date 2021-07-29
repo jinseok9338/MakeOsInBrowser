@@ -1,4 +1,4 @@
-import TaskbarEntry from 'components/system/TaskbarEntry';
+import TaskbarEntry from 'components/system/Taskbar/TaskbarEntry';
 import type { FC } from 'react';
 import StyledTaskbarEntries from 'styles/components/system/StyledTaskbarEntries';
 // Todo: Taskbar entries to loop through

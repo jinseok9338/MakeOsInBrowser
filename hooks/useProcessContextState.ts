@@ -3,7 +3,7 @@ import type { ProcessContextState } from 'types/contexts/process';
 import { getStartupProcesses } from 'utils/processDirectory';
 
 const useProcessContextState = (): ProcessContextState => {
-  const [processes, setProcesses] = useState(getStartupProcesses());
+  const [processes /* , setProcesses */] = useState(getStartupProcesses());
 
   return { processes };
 };
