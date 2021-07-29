@@ -1,5 +1,3 @@
-import type { RefObject } from 'react';
-
 export type VantaWavesSettings = {
   color: number;
   shiness: number;
@@ -10,4 +8,4 @@ export type VantaWavesSettings = {
 
 export type wallpaperEffect = (
   settings: VantaWavesSettings
-) => (desktopRef: RefObject<HTMLElement>) => () => void;
+) => (element: HTMLElement) => () => void;
