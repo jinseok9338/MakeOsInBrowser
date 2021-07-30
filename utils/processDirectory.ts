@@ -1,25 +1,34 @@
-import Taskbar from 'components/system/Taskbar/Taskbar';
+// import Taskbar from 'components/system/Taskbar/Taskbar';
 import dynamic from 'next/dynamic';
-import type { Processes } from 'types/contexts/process';
+import type { Process } from 'types/contexts/process';
 
-const STARTUP_PROCESSES: string[] = ['HelloWorld', 'Taskbar'];
+// const STARTUP_PROCESSES: string[] = ['HelloWorld', 'Taskbar'];
 
-export const processDirectory: Processes = {
-  HelloWorld: {
-    Component: dynamic(() => import('components/apps/HelloWorld')),
-    hasWindow: true
-  },
-  Taskbar: {
-    Component: Taskbar
-    //  dynamic(() => import('components/system/Taskbar'))
-  }
+// const processDirectory: Processes = {
+//   HelloWorld: {
+//     Component: dynamic(() => import('components/apps/HelloWorld')),
+//     hasWindow: true
+//   },
+//   Taskbar: {
+//     Component: Taskbar
+//     //  dynamic(() => import('components/system/Taskbar'))
+//   }
+// };
+
+// export const getStartupProcesses = (): Processes =>
+//   STARTUP_PROCESSES.reduce(
+//     (processes, processId) => ({
+//       ...processes,
+//       [processId]: processDirectory[processId]
+//     }),
+//     {}
+//   );
+
+export const HelloWorld: Process = {
+  Component: dynamic(() => import('components/apps/HelloWorld')),
+  hasWindow: true
 };
 
-export const getStartupProcesses = (): Processes =>
-  STARTUP_PROCESSES.reduce(
-    (processes, processId) => ({
-      ...processes,
-      [processId]: processDirectory[processId]
-    }),
-    {}
-  );
+export const Taskbar: Process = {
+  Component: dynamic(() => import('components/system/Taskbar/Taskbar'))
+};
