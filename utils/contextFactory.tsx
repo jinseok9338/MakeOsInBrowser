@@ -16,11 +16,3 @@ const contextFactory: ContextFactory = (
 };
 
 export default contextFactory;
-
-// const {Consumer, Provider} = contextFactory(
-
-// )
-
-// export default {
-//     Consumer as ProcessConsumer, Provider as ProcessProvider
-// }
