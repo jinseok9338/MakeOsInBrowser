@@ -8,4 +8,4 @@ export type VantaWavesSettings = {
 
 export type wallpaperEffect = (
   settings: VantaWavesSettings
-) => (element: HTMLElement) => () => void;
+) => (element?: HTMLElement) => () => void;
