@@ -5,7 +5,8 @@ import { HelloWorld, Taskbar } from 'utils/processDirectory';
 
 const useProcessContextState = (): ProcessContextState => {
   const [processes /* , setProcesses */] = useState({
-    /* HelloWorld, */ Taskbar
+    HelloWorld,
+    Taskbar
   });
 
   return { processes };
