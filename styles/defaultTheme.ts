@@ -8,12 +8,18 @@ const colors = {
   window: '#808080'
 };
 
+const fonts = {
+  clock: {
+    size: '12px'
+  }
+};
+
 const sizes = {
   clock: {
-    width: '90px'
+    width: '76px'
   },
   startbutton: {
-    width: '30px'
+    width: '36px'
   },
   taskbar: {
     height: '30px',
@@ -35,6 +41,7 @@ const wallpaper = vantaWaves({
 const defaultTheme: DefaultTheme = {
   colors,
   sizes,
+  fonts,
   // @ts-expect-error
   wallpaper
 };
