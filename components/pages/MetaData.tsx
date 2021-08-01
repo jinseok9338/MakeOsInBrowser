@@ -5,7 +5,7 @@ import {
 } from 'package.json';
 import type { FC } from 'react';
 
-const MetaData: FC = () => (
+const MetaData = (): JSX.Element => (
   <Head>
     <meta name="description" content={PackageDescription} />
     <title>{PackageName}</title>

@@ -11,7 +11,7 @@ const RenderProcesses: FC<{ processes: Processes }> = ({ processes }) => (
   </>
 );
 
-const ProcessLoader: FC = () => (
+const ProcessLoader = (): JSX.Element => (
   <ProcessConsumer>
     {({ processes }) => <RenderProcesses processes={processes} />}
   </ProcessConsumer>
