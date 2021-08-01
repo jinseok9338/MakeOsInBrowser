@@ -14,6 +14,13 @@ const sizes = {
   },
   startbutton: {
     width: '30px'
+  },
+  taskbar: {
+    height: '30px',
+    width: '100vw',
+    entry: {
+      width: '80px'
+    }
   }
 };
 

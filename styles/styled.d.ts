@@ -16,6 +16,13 @@ declare module 'styled-components' {
       startbutton: {
         width: string;
       };
+      taskbar: {
+        height: string;
+        width: string;
+        entry: {
+          width: string;
+        };
+      };
     };
     wallpaper?: wallpaperEffect;
   }
