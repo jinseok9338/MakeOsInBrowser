@@ -25,7 +25,7 @@ declare module 'styled-components' {
         height: string;
         width: string;
         entry: {
-          width: string;
+          maxwidth: string;
         };
       };
     };

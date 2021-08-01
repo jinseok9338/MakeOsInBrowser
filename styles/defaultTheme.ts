@@ -25,7 +25,7 @@ const sizes = {
     height: '30px',
     width: '100vw',
     entry: {
-      width: '80px'
+      maxwidth: '161px'
     }
   }
 };
