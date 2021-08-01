@@ -36,5 +36,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 currnet video tutorial
-https://www.youtube.com/watch?v=prxGXXX-SU0&list=PLM88opVjBuU7xSRoHhs3hZBz3JmHHBMMN&index=7
-at animated WallAppaer
+https://www.youtube.com/watch?v=y_RZ_YitbXg&list=PLM88opVjBuU7xSRoHhs3hZBz3JmHHBMMN&index=8
