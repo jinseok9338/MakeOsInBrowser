@@ -5,15 +5,15 @@ import type { ReactElement } from 'react';
 
 import StyledApp from '../components/pages/styledApp'; // Move to environment
 
-export default function App({ Component, pageProps }: AppProps): ReactElement {
-  return (
-    <>
-      <MetaData />
-      <SessionProvider>
-        <StyledApp>
-          <Component {...pageProps} />
-        </StyledApp>
-      </SessionProvider>
-    </>
-  );
-}
+const App = ({ Component, pageProps }: AppProps): ReactElement => (
+  <>
+    <MetaData />
+    <SessionProvider>
+      <StyledApp>
+        <Component {...pageProps} />
+      </StyledApp>
+    </SessionProvider>
+  </>
+);
+
+export default App;
