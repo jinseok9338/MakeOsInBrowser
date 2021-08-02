@@ -7,11 +7,7 @@ const Desktop: FC = ({ children }) => {
   const desktopRef = useRef<HTMLElement | null>(null);
 
   useWallpaper(desktopRef);
-  return (
-    <StyledDesktop ref={desktopRef} role="main">
-      {children}
-    </StyledDesktop>
-  );
+  return <StyledDesktop ref={desktopRef}>{children}</StyledDesktop>;
 };
 
 export default Desktop;
