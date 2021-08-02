@@ -5,6 +5,7 @@ import vantaWaves from 'utils/vantaWaves';
 const colors = {
   backgroundcolor: '#000',
   primary: '#000',
+  taskbar: 'rgba(0, 0, 0, 60%)',
   window: '#808080'
 };
 
@@ -22,6 +23,7 @@ const sizes = {
     width: '36px'
   },
   taskbar: {
+    blur: '5px',
     height: '30px',
     width: '100vw',
     entry: {

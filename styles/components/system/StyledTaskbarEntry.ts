@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledTaskbarEntries = styled.li`
-  background-color: pink;
   display: flex;
   height: 100%;
   place-content: center;

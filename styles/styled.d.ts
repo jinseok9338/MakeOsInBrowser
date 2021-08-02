@@ -7,6 +7,7 @@ declare module 'styled-components' {
     colors: {
       backgroundcolor: string;
       primary: string;
+      taskbar: string;
       window: string;
     };
     fonts: {
@@ -24,6 +25,7 @@ declare module 'styled-components' {
       taskbar: {
         height: string;
         width: string;
+        blur: string;
         entry: {
           maxwidth: string;
         };
