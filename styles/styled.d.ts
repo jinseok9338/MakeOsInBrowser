@@ -10,6 +10,7 @@ declare module 'styled-components' {
       startbutton: string;
       taskbar: string;
       window: string;
+      clockText: string;
     };
     sizes: {
       clock: {

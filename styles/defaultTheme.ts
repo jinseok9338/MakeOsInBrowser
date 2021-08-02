@@ -7,7 +7,8 @@ const colors = {
   primary: '#000',
   startbutton: '#FFF',
   taskbar: 'rgba(0, 0, 0, 60%)',
-  window: '#808080'
+  window: '#808080',
+  clockText: 'rgba(255, 255, 255, 80%)'
 };
 
 // const fonts = {
