@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
 }
 
+body {
+  font-family: system-ui -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
 button {
   background-color: unset;
 }
