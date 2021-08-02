@@ -1,7 +1,11 @@
+import { faWindows } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import StyledStartButton from 'styles/components/system/StyledStartButton';
 
 const StartButton = (): JSX.Element => (
-  <StyledStartButton title="start">s</StyledStartButton>
+  <StyledStartButton title="start">
+    <FontAwesomeIcon icon={faWindows} />
+  </StyledStartButton>
 );
 
 export default StartButton;
