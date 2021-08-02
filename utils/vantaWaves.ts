@@ -1,11 +1,16 @@
 import * as THREE from 'three';
-import type {
-  VantaWavesSettings,
-  wallpaperEffect
-} from 'types/styles/wallpaper';
+import type { wallpaperEffect } from 'types/styles/wallpaper';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import WAVES from 'vanta/dist/vanta.waves.min';
+
+export type VantaWavesSettings = {
+  color: number;
+  shiness: number;
+  waveHeight: number;
+  waveSpeed: number;
+  zoom: number;
+};
 
 const disableControls = {
   mouseControls: false,
@@ -14,20 +19,22 @@ const disableControls = {
 
 const hasWebGLContext = typeof WebGLRenderingContext !== 'undefined';
 
-const vantaWaves: wallpaperEffect = (settings: VantaWavesSettings) => (el) => {
-  const vantaEffect =
-    hasWebGLContext && el
-      ? WAVES({
-          el,
-          THREE,
-          ...disableControls,
-          ...settings
-        })
-      : undefined;
+const vantaWaves =
+  (settings: VantaWavesSettings): wallpaperEffect =>
+  (el) => {
+    const vantaEffect =
+      hasWebGLContext && el
+        ? WAVES({
+            el,
+            THREE,
+            ...disableControls,
+            ...settings
+          })
+        : undefined;
 
-  return () => {
-    vantaEffect?.destroy?.();
+    return () => {
+      vantaEffect?.destroy?.();
+    };
   };
-};
 
 export default vantaWaves;

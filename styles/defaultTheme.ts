@@ -42,7 +42,6 @@ const defaultTheme: DefaultTheme = {
   colors,
   sizes,
   fonts,
-  // @ts-expect-error
   wallpaper
 };
 

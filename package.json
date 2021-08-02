@@ -11,7 +11,7 @@
     "eslint": "eslint . --fix ",
     "test": "jest",
     "test:watch": "jest --watch",
-    "stylelint": "stylelint **/*.tsx",
+    "stylelint": "stylelint **/*.ts",
     "prettier": "prettier --write ."
   },
   "dependencies": {
@@ -71,6 +71,6 @@
   "lint-staged": {
     "*": "prettier --write",
     "*.{js,ts,tsx}": "eslint --fix",
-    "*.tsx": "stylelint --fix"
+    "*.ts": "stylelint --fix"
   }
 }

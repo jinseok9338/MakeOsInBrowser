@@ -9,3 +9,5 @@ yarn.lock
 static/
 /libs
 .eslintignore
+.gitattributes
+.stylelintrc.json
