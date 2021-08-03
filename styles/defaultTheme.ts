@@ -3,10 +3,15 @@ import type { DefaultTheme } from 'styled-components';
 import vantaWaves from 'utils/vantaWaves';
 
 const colors = {
+  text: 'rgba(255, 255, 255, 90%)',
   backgroundcolor: '#000',
   primary: '#000',
   startbutton: '#FFF',
-  taskbar: 'rgba(0, 0, 0, 60%)',
+  taskbar: {
+    active: 'hsla(0, 0%, 20%, 70%)',
+    hover: 'hsla(0, 0%, 25%, 70%)',
+    foreground: 'hsla(0, 0%, 35%, 70%)'
+  },
   window: '#808080',
   clockText: 'rgba(255, 255, 255, 80%)'
 };
@@ -36,6 +41,20 @@ const sizes = {
   }
 };
 
+export const formats = {
+  date: {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  } as Intl.DateTimeFormatOptions,
+  time: {
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  } as Intl.DateTimeFormatOptions
+};
+
 const wallpaper = vantaWaves({
   color: 0x3d3d69,
   shiness: 35,
@@ -48,7 +67,8 @@ const defaultTheme: DefaultTheme = {
   colors,
   sizes,
   // fonts,
-  wallpaper
+  wallpaper,
+  formats
 };
 
 export default defaultTheme;
