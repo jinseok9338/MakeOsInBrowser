@@ -11,4 +11,4 @@ static/
 .eslintignore
 .gitattributes
 .stylelintrc.json
-deepsource.toml
+.deepsource.toml
