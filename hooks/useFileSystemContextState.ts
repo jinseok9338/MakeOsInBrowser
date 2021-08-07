@@ -1,22 +1,17 @@
-import * as BrowserFS from 'browserfs';
+import { BFSRequire, configure } from 'browserfs';
 import type { FSModule } from 'browserfs/dist/node/core/FS';
 import { useEffect, useState } from 'react';
 import type { FileSystemContextState } from 'types/contexts/fileSystem';
+import fileSystemConfig from 'utils/FileSystemConfig';
 
 const useFileSystemContextState = (): FileSystemContextState => {
   const [fs, setFs] = useState<FSModule | null>(null);
 
   useEffect(() => {
-    BrowserFS.install(window);
-
-    BrowserFS.configure(
-      {
-        fs: 'IndexedDb',
-        options: null
-      },
-      () => setFs(BrowserFS.BFSRequire('fs'))
-    );
-  }, [setFs]);
+    if (!fs) {
+      configure(fileSystemConfig, () => setFs(BFSRequire('fs')));
+    }
+  }, [fs]);
   return { fs };
 };
 
