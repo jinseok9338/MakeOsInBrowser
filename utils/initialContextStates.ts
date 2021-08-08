@@ -3,7 +3,9 @@ import type { ProcessContextState } from 'types/contexts/process';
 import type { SessionContextState } from 'types/contexts/session';
 
 export const initialProcessContextState: ProcessContextState = {
-  processes: {}
+  processes: {},
+  close: () => undefined,
+  open: () => undefined
 };
 
 export const initialSessionContextState: SessionContextState = {

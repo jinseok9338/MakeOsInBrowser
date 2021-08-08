@@ -3,8 +3,8 @@ import type { ComponentType } from 'react';
 export type Process = {
   Component: ComponentType;
   hasWindow?: boolean;
-  icon?: string;
-  title?: string;
+  icon: string;
+  title: string;
 };
 
 export type Processes = {
@@ -13,4 +13,6 @@ export type Processes = {
 
 export type ProcessContextState = {
   processes: Processes;
+  close: (id: string) => void;
+  open: (id: string) => void;
 };

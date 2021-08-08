@@ -1,26 +1,13 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import type { ProcessContextState, Processes } from 'types/contexts/process';
-import ProcessDirectory from 'utils/processDirectory';
-
-const closeProcess =
-  (processId: string) =>
-  ({ [processId]: _closedProcess, ...remainingProcesses }) =>
-    remainingProcesses;
-
-const openProcess = (processId: string) => (currentProcesses: Processes) =>
-  currentProcesses[processId]
-    ? currentProcesses
-    : {
-        ...currentProcesses,
-        [processId]: ProcessDirectory[processId]
-      };
+import { closeProcess, openProcess } from 'utils/processFunctions';
 
 const useProcessContextState = (): ProcessContextState => {
   const [processes, setProcesses] = useState<Processes>({});
-  const close = (processId: string) => setProcesses(closeProcess(processId));
-  const open = (processId: string) => setProcesses(openProcess(processId));
+  const close = useCallback((id: string) => setProcesses(closeProcess(id)), []);
+  const open = useCallback((id: string) => setProcesses(openProcess(id)), []);
 
-  return { processes };
+  return { close, open, processes };
 };
 
 export default useProcessContextState;
