@@ -10,6 +10,7 @@ declare module 'styled-components' {
       backgroundcolor: string;
       primary: string;
       startbutton: string;
+      highlight: string;
       taskbar: {
         active?: string;
         activeForeground?: string;
@@ -37,6 +38,11 @@ declare module 'styled-components' {
         blur: string;
         entry: {
           maxwidth: string;
+          borderSize: string;
+          fontSize: string;
+          icon: {
+            size: string;
+          };
         };
       };
     };

@@ -7,6 +7,7 @@ const colors = {
   backgroundcolor: '#000',
   primary: '#000',
   startbutton: '#FFF',
+  highlight: 'hsl(207deg 100% 72% / 90%)',
   taskbar: {
     active: 'hsla(0, 0%, 20%, 70%)',
     hover: 'hsla(0, 0%, 25%, 70%)',
@@ -15,12 +16,6 @@ const colors = {
   window: '#808080',
   clockText: 'rgba(255, 255, 255, 80%)'
 };
-
-// const fonts = {
-//   clock: {
-//     size: '12px'
-//   }
-// };
 
 const sizes = {
   clock: {
@@ -36,7 +31,12 @@ const sizes = {
     height: '30px',
     width: '100vw',
     entry: {
-      maxwidth: '161px'
+      maxwidth: '161px',
+      borderSize: '2px',
+      fontSize: '12px',
+      icon: {
+        size: '16px'
+      }
     }
   }
 };
