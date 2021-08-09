@@ -11,6 +11,7 @@ const App = ({ Component, pageProps }: AppProps): ReactElement => (
     <SessionProvider>
       <StyledApp>
         <MetaData />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </StyledApp>
     </SessionProvider>
