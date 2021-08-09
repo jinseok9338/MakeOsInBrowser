@@ -1,1 +1,6 @@
-{ "favicon.ico": null, "favicon.png": null, "vercel.svg": null }
+{
+  "desktop": { "SomefileWith.url": null },
+  "favicon.ico": null,
+  "favicon.png": null,
+  "vercel.svg": null
+}
