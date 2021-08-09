@@ -9,7 +9,7 @@ export const DEFAULT_LOCALE = 'en';
 
 export const EMPTY_BUFFER = Buffer.from('');
 
-export const IMAGE_FILE_EXTENSIONS = new Set([
+export const IMAGE_FILE_EXTENSIONS = [
   '.apng',
   '.avif',
   '.bmp',
@@ -28,7 +28,7 @@ export const IMAGE_FILE_EXTENSIONS = new Set([
   '.tiff',
   '.webp',
   '.xbm'
-]);
+];
 
 export const MENU_SEPERATOR = { seperator: true };
 
