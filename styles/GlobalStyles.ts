@@ -13,10 +13,12 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: system-ui -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  user-select: none;
 }
 
 button {
   background-color: transparent;
+  font-family: inherit;
 }
 
 ol,

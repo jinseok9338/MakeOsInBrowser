@@ -10,6 +10,10 @@ const StyledTaskbarEntries = styled.li`
   place-items: center;
   width: ${({ theme }) => theme.sizes.taskbar.entry.maxwidth};
 
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.taskbar.hover};
+  }
+
   figure {
     align-items: center;
     display: flex;
