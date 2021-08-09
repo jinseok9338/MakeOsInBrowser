@@ -6,8 +6,8 @@ import StyledTaskbarEntries from 'styles/components/system/StyledTaskbarEntries'
 const TaskbarEntries: FC = () => (
   <StyledTaskbarEntries>
     <ProcessConsumer>
-      {({ processes }) =>
-        Object.entries(processes).map(([id, { icon, title }]) => (
+      {({ mapProcesses }) =>
+        mapProcesses(([id, { icon, title }]) => (
           <TaskbarEntry key={id} icon={icon} title={title} />
         ))
       }

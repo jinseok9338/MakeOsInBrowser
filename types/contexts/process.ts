@@ -11,8 +11,12 @@ export type Processes = {
   [id: string]: Process;
 };
 
+export type processesMap = (
+  callba: ([id, process]: [string, Process]) => JSX.Element
+) => JSX.Element[];
+
 export type ProcessContextState = {
-  processes: Processes;
+  mapProcesses: processesMap;
   close: (id: string) => void;
   open: (id: string) => void;
 };
